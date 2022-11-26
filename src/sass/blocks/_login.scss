@@ -50,10 +50,11 @@
         }
     }
     &__restore {
+        text-decoration: underline;
         &:hover,
         &:focus,
         &:active {
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
     &__buttons {
