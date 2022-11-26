@@ -2158,6 +2158,7 @@ input[type=number] {
 
 .restore-password {
   font-family: "Scada", sans-serif;
+  line-height: 1.5;
   background-color: #555555;
   padding: 1.875rem 0;
   text-align: center;
@@ -2194,7 +2195,7 @@ input[type=number] {
 
 .label-block__title::after {
   content: "*";
-  position: absolute;
+  position: relative;
   color: #F30E0E;
   top: -0.3125rem;
 }
@@ -2222,6 +2223,7 @@ input[type=number] {
 
 .registration {
   font-family: "Scada", sans-serif;
+  line-height: 1.5;
   background-color: #555555;
   padding: 1.875rem 0;
   text-align: center;
@@ -2706,10 +2708,14 @@ input[type=number] {
   text-decoration: underline;
 }
 
+.login__restore {
+  text-decoration: underline;
+}
+
 .login__restore:hover,
 .login__restore:focus,
 .login__restore:active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .login__buttons {
