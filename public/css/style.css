@@ -995,6 +995,12 @@ body {
 }
 
 .filter__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 1.125rem;
 }
 
@@ -2380,6 +2386,11 @@ input[type=number] {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   padding: 3.75rem 1.875rem;
   text-align: center;
   font-size: 1.125rem;
@@ -2401,15 +2412,12 @@ input[type=number] {
 }
 
 .mobile-navigation__link {
-  padding: 0.3125rem 1.5625rem 0.3125rem 0.3125rem;
+  width: 100%;
+  padding: 0.625rem 1.5625rem;
 }
 
 .mobile-navigation__link-icon {
   top: 0.625rem;
-}
-
-.mobile-navigation__logo {
-  margin-bottom: 1.875rem;
 }
 
 .mobile-header-logo {
@@ -2549,24 +2557,6 @@ input[type=number] {
 
 .spoiler-show {
   display: block;
-}
-
-.spoiler-arrow {
-  display: inline-block;
-  position: relative;
-  padding-right: 1.875rem;
-}
-
-.spoiler-arrow::before {
-  content: "";
-  position: absolute;
-  background-image: url(../img/dropdown-icon.svg);
-  background-repeat: no-repeat;
-  width: 0.9375rem;
-  height: 0.75rem;
-  right: 0;
-  top: 0.6875rem;
-  display: none;
 }
 
 .motoservices {
@@ -2769,10 +2759,6 @@ input[type=number] {
 
   .sorting-btn--icon-arrow-down span::before {
     background-image: url(../img/arrow-down.svg);
-  }
-
-  .spoiler-arrow::before {
-    background-image: url(../img/dropdown-icon.svg);
   }
 
   .login__checkbox-input:checked + .custom-checkbox::before {

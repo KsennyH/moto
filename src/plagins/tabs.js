@@ -1,3 +1,5 @@
+// COLOR
+
 const colorBtns = document.querySelectorAll('.js-color-btn');
 const colorImg = document.querySelectorAll('.js-img');
 
@@ -25,10 +27,23 @@ colorBtns.forEach(el => {
 document.querySelector('.js-color-btn').click();
 
 
+// FEATURE SPOILER
+
 const featureBtn = document.querySelector('.feature-top__btn');
 const feature = document.querySelector('.feature-bottom');
 
 featureBtn.addEventListener('click', function () {
     this.classList.toggle('open');
     feature.classList.toggle('active');
+});
+
+
+//CHARACKTERISTICK SPOILER
+
+const spoilers = document.querySelectorAll("[data-feature='spoiler']");
+
+spoilers.forEach(el => {
+    el.addEventListener('click', function () {
+        this.nextElementSibling.classList.toggle('spoiler-show');
+    });
 });
