@@ -1,0 +1,7 @@
+.news {
+    &__item {
+        & + & {
+            margin-top: 3.75rem;
+        }
+    }
+}

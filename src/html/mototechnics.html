@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('./chunk/head.html', {
+    "title": "Мото-мир"
+    })
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('./chunk/top-header.html')
+            <div class="header__bottom bottom-header">
+                <div class="container">
+                    <nav class="bottom-header__nav navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="index.html">
+                                    <span>Главная</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--active">
+                                    <span>Мототехника</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мотоциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мопеды</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Скутеры</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Квадроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Гидроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Снегоходы</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Мотозапчасти</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотохимия</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шины</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Расходники</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Лобовые стёкла</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Пластик</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Экипировка</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шлемы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Куртки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Комбинезоны</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Перчатки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотоботы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Аксессуары</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="motoservices.html">
+                                    <span>Мотосервис</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="articles.html">
+                                    <span>Статьи</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="contacts.html">
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    @@include('./chunk/mobile-nav.html')
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active">Мототехника</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="catalog">
+                <div class="container">
+                    <div class="catalog__inner">
+                        <div class="catalog__filter-btn js-filter-btn">
+                            <img src="img/filter.svg" alt="Фильтр">
+                        </div>
+                        <aside class="catalog__filter filter js-filter">
+                            <form action="" class="filter__settings js-filter-form">
+                                <div class="filter__price-block toggle-block">
+                                    <h5 class="toggle-block__title filter-title filter-title--spoiler-arrow" data-spoiler="spoiler">Цена (руб)</h5>
+                                    <div class="toggle-block__body spoiler-show">
+                                        <div class="toggle-block__inputs">
+                                            <label class="toggle-block__label">
+                                                <input class="toggle-block__input" id="price-input-0" type="number" min="500" max="999999" placeholder="500">
+                                            </label>
+                                            <label class="toggle-block__label">
+                                                <input class="toggle-block__input" id="price-input-1" type="number" min="500" max="999999" placeholder="999999">
+                                            </label>
+                                        </div>
+                                        <div class="toggle-block__range js-price-slider"></div>
+                                    </div>
+                                </div>
+                                <div class="filter__technics-block checkbox-block">
+                                    <h5 class="checkbox-block__title filter-title filter-title--spoiler-arrow" data-spoiler="spoiler">Техника</h5>
+                                    <ul class="checkbox-block__list spoiler-show">
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="" checked>
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Мотоциклы</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Мопеды</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Скутеры</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Квадроциклы</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Гидроциклы</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Снегоходы</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__type-block checkbox-block">
+                                    <h5 class="checkbox-block__title filter-title filter-title--spoiler-arrow" data-spoiler="spoiler">Тип мотоцикла</h5>
+                                    <ul class="checkbox-block__list spoiler-show">
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="" checked>
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Спортивный</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="" checked>
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Дорожный</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Чоппер</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Туристический</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Эндуро</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="" checked>
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Питбайк</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__brands-block checkbox-block">
+                                    <h5 class="checkbox-block__title filter-title filter-title--spoiler-arrow" data-spoiler="spoiler">Бренд</h5>
+                                    <ul class="checkbox-block__list spoiler-show">
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" checked name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Baltmotors</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Stels</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Wels</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" checked name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Irbis</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" checked name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Racer</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">MotoLand</span>
+                                            </label>
+                                        </li>
+                                        <li class="checkbox-block__item">
+                                            <label class="checkbox-block__label checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="">
+                                                <span class="checkbox__custom custom-checkbox"></span>
+                                                <span class="checkbox__name">Lifan</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__size-block toggle-block">
+                                    <h5 class="toggle-block__title filter-title filter-title--spoiler-arrow" data-spoiler="spoiler">Объём двигателя (куб. см)</h5>
+                                    <div class="toggle-block__body spoiler-show">
+                                        <div class="toggle-block__inputs">
+                                            <label class="toggle-block__label">
+                                                <input class="toggle-block__input" id="size-input-0" type="number" min="50" max="1000" placeholder="50">
+                                            </label>
+                                            <label class="toggle-block__label">
+                                                <input class="toggle-block__input" id="size-input-1" type="number" min="50" max="1000" placeholder="1000">
+                                            </label>
+                                        </div>
+                                        <div class="toggle-block__range js-size-slider"></div>
+                                    </div>
+                                </div>
+                                <div class="filter__mileage-block radio-block">
+                                    <h5 class="radio-block__title filter-title filter-title--spoiler-arrow" data-spoiler="spoiler">Пробег (км)</h5>
+                                    <ul class="radio-block__list spoiler-show">
+                                        <li class="radio-block__item">
+                                            <label class="radio-block__label radio">
+                                                <input class="radio__input" type="radio" name="mileage">
+                                                <span class="radio__custom custom-radio"></span>
+                                                <span class="radio__name">С пробегом</span>
+                                            </label>
+                                        </li>
+                                        <li class="radio-block__item">
+                                            <label class="radio-block__label radio">
+                                                <input class="radio__input" type="radio" name="mileage" checked> 
+                                                <span class="radio__custom custom-radio"></span>
+                                                <span class="radio__name">Без пробега</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__btn">
+                                    <button class="btn btn--small" type="submit">Показать</button>
+                                </div>
+                                <div class="filter__reset">
+                                    <button class="filter__reset-btn">Сбросить настройки</button>
+                                </div>
+                            </form>
+                        </aside>
+                        <div class="catalog__products products-block">
+                            <nav class="products-block__sorting sorting">
+                                <ul class="sorting__list">
+                                    <li class="sorting__item">
+                                        <button class="sorting-btn sorting-btn--icon sorting-btn--icon-arrow-up active" type="button">
+                                            <span>По цене</span>
+                                        </button>
+                                    </li>
+                                    <li class="sorting__item">
+                                        <button class="sorting-btn sorting-btn--icon sorting-btn--icon-arrow-down" type="button">
+                                            <span>По цене</span>
+                                        </button>
+                                    </li>
+                                    <li class="sorting__item">
+                                        <button class="sorting-btn" type="button">По популярности</button>
+                                    </li>
+                                    <li class="sorting__item">
+                                        <button class="sorting-btn" type="button">По алфавиту</button>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul class="products-block__list">
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/1.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">IRBIS VIRAGO</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">25 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article> 
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/2.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Racer VIPER</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">32 600 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/3.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">IRBIS TTR 110</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">36 500 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/4.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Motoland CRF 10</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">40 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/5.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Racer SKYWAY</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">45 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/6.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Irbis ttr 125</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">54 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/7.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Stels Delta 200</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">57 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/8.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">IRBIS VR1 200сс</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">60 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/9.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">IRBIS GR 250сс</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2022</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">78 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/2.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Racer VIPER</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">32 600 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/7.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Stels Delta 200</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">57 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="products-block__item">
+                                    <article class="products-block__card product-card">
+                                        <div class="product-card__img">
+                                            <img src="img/4.jpg" alt="">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title card-title">Motoland CRF 10</h3>
+                                            <div class="product-card__content">
+                                                <span class="product-card__article">Артикул: 17931</span>
+                                                <div class="product-card__information">
+                                                    <span class="product-card__year">2021</span>
+                                                    <span class="product-card__text">В наличии</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="product-card__price btn btn--price">40 000 руб.</span>
+                                        <div class="product-card__overlay">
+                                            <a class="product-card__overlay-link link" href="product-card.html">Подробнее</a>
+                                            <button class="product-card__btn btn-busket">
+                                                <svg class="btn-busket__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.8094 4.69533C17.9683 4.88251 18.0278 5.10712 17.9881 5.36917L17.2335 9.44968C17.207 9.66187 17.1044 9.83651 16.9257 9.97378C16.747 10.111 16.5452 10.1797 16.3201 10.1797H5.31892L5.10048 11.3402H15.5854C15.8369 11.3402 16.0552 11.4244 16.2406 11.5929C16.426 11.7613 16.5186 11.9703 16.5186 12.2199C16.5186 12.4695 16.426 12.6785 16.2406 12.847C16.0552 13.0154 15.8369 13.0996 15.5854 13.0996H3.98845C3.71044 13.0996 3.47215 12.9936 3.27357 12.7815C3.08824 12.5693 3.01542 12.326 3.05514 12.0515L3.55158 9.50592L2.79699 2.35567L0.652361 1.71926C0.400831 1.64439 0.218802 1.50086 0.106275 1.28875C-0.00625149 1.07659 -0.0294188 0.852006 0.0367735 0.614914C0.116204 0.377822 0.271756 0.206242 0.503429 0.100175C0.735102 -0.00589263 0.970084 -0.0277301 1.20838 0.0346626L3.94874 0.858245C4.12084 0.908159 4.26315 1.00175 4.37568 1.13901C4.4882 1.27628 4.5577 1.43229 4.58418 1.60699L4.74304 3.02954L17.1739 4.33978C17.452 4.37713 17.6638 4.49567 17.8094 4.69533ZM5.39838 13.5863C5.79553 13.5863 6.13311 13.7173 6.41112 13.9794C6.68913 14.2414 6.82813 14.5597 6.82813 14.9341C6.82813 15.3083 6.68913 15.6297 6.41112 15.898C6.13311 16.1663 5.79553 16.3004 5.39838 16.3004C5.00122 16.3004 4.66364 16.1663 4.38564 15.898C4.10763 15.6298 3.96863 15.3084 3.96863 14.9341C3.96863 14.5597 4.10763 14.2414 4.38564 13.9794C4.66361 13.7173 5.00119 13.5863 5.39838 13.5863ZM13.8776 13.5863C14.2747 13.5863 14.6123 13.7173 14.8903 13.9794C15.1682 14.2414 15.3074 14.5597 15.3074 14.9341C15.3074 15.3083 15.1683 15.6297 14.8903 15.898C14.6123 16.1663 14.2747 16.3004 13.8776 16.3004C13.4804 16.3004 13.1428 16.1663 12.8649 15.898C12.5869 15.6298 12.4478 15.3084 12.4478 14.9341C12.4478 14.5597 12.5868 14.2414 12.8649 13.9794C13.1428 13.7173 13.4804 13.5863 13.8776 13.5863Z" fill="white"/>
+                                                </svg>
+                                                <span class="btn-busket__text">В корзину</span>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                            @@include('./chunk/pagination.html')
+                            <div class="catalog__text">
+                                <p>
+                                    Представляем вашему вниманию каталог мотоциклов с ценами и характеристиками. 
+                                    На данной странице представлены практически все бренды мотоциклов, скутеров и квадроциклов, 
+                                    продажа которых осуществляется на территории Ивановской области в официальных автосалонах. 
+                                    Каталог мототехники содержит подробную информацию о характеристиках и актуальных ценах на 
+                                    новые модели. 
+                                </p>
+                                <p>
+                                    Благодаря разработанным сервисам, любой посетитель сам может сделать выбор: на сайте доступно 
+                                    сравнение мотоциклов, скутеров и квадроциклов по различным параметрам. Также есть возможность 
+                                    самостоятельно, задав характеристики мотоцикла, подобрать мототехнику.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+        </main>        
+
+        @@include('./chunk/footer.html')
+    </div>
+
+    <script async src="plagins/nouislider.min.js"></script>
+    <script async src="plagins/range-slider.js"></script>
+    <script async src="plagins/mobile-filter.js"></script>
+    <script async src="js/main.js"></script>
+</body>
+</html>

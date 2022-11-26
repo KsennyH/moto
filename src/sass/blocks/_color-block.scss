@@ -1,0 +1,49 @@
+.color-block {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Scada', sans-serif;
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-right: 0.625rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__label {
+        display: block;
+        margin-right: 2.5rem;
+    }
+    &__btn {
+        &.active {
+            .color-block__btn-tab {
+                border-bottom: 0.1875rem solid $dark-bg;
+                box-shadow: -0.125rem 0.125rem 0.1875rem rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+    &__btn-tab {
+        display: inline-block;
+        width: 3.125rem;
+        height: 1.25rem;
+        border-radius: 3px;
+        &--white {
+            background-color: #fff;
+        }
+        &--red {
+            background-color: $red;
+        }
+        &--black {
+            background-color: #000;
+        }
+        &--yellow {
+            background-color: #e5f749;
+        }
+        &--grey {
+            background-color: #c6bcab;
+        }
+    }
+}

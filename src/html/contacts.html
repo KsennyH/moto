@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('./chunk/head.html', {
+    "title": "Мото-мир"
+    })
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('./chunk/top-header.html')
+            <div class="header__bottom bottom-header">
+                <div class="container">
+                    <nav class="bottom-header__nav navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="index.html">
+                                    <span>Главная</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="mototechnics.html">
+                                    <span>Мототехника</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мотоциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мопеды</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Скутеры</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Квадроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Гидроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Снегоходы</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Мотозапчасти</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотохимия</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шины</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Расходники</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Лобовые стёкла</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Пластик</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Экипировка</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шлемы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Куртки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Комбинезоны</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Перчатки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотоботы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Аксессуары</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="motoservices.html">
+                                    <span>Мотосервис</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="articles.html">
+                                    <span>Статьи</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--active">
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    @@include('./chunk/mobile-nav.html')
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <div class="contacts__map map">
+                            <iframe class="map__img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2173.1918532609575!2d40.996650215950474!3d56.99689978090434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414d1414a6f989d3%3A0x7ebf460cb3848556!2z0YPQuy4g0KHQsNC60LrQviwgNTQsINCY0LLQsNC90L7QstC-LCDQmNCy0LDQvdC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNTMwMTI!5e0!3m2!1sru!2sru!4v1663089123308!5m2!1sru!2sru" width="600" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contacts__content">
+                            <h1 class="contacts__title title">Контакты</h1>
+                            <div class="contacts__info">
+                                <h2 class="contacts__label">Адрес:</h2>
+                                <p class="contacts__text">Ивановская область, город Иваново, улица Сакко, дом 54</p>
+                            </div>
+                            <div class="contacts__info">
+                                <h2 class="contacts__label">Телефон:</h2>
+                                <a class="contacts__text" href="tel:84932134581">8 (4932) 134-581</a>
+                            </div>
+                            <div class="contacts__info">
+                                <h2 class="contacts__label">Электронная почта:</h2>
+                                <a class="contacts__text" href="mailto:motomirIvanovo@email.com">motomirIvanovo@email.com</a>
+                            </div>
+                            <div class="contacts__info">
+                                <h2 class="contacts__label">Социальные сети:</h2>
+                                <div class="contacts__social social">
+                                    <ul class="social__list">
+                                        <li class="social__item">
+                                            <a class="social__link" href="#" aria-label="Ссылка на фэйсбук">
+                                                <svg class="social__link-icon" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24.403 19H22V17C22 15.968 22.084 15.318 23.563 15.318H24.431C24.983 15.318 25.431 14.87 25.431 14.318V13.064C25.431 12.541 25.03 12.094 24.508 12.059C23.904 12.018 23.299 11.999 22.693 12C19.98 12 18 13.657 18 16.699V19H16C15.448 19 15 19.448 15 20V22C15 22.552 15.448 23 16 23L18 22.999V31C18 31.552 18.448 32 19 32H21C21.552 32 22 31.552 22 31V22.997L24.174 22.996C24.682 22.996 25.109 22.615 25.167 22.11L25.396 20.114C25.465 19.521 25.001 19 24.403 19Z" fill="white"/>
+                                                    <circle cx="21" cy="21" r="20.5" stroke="white"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="social__item">
+                                            <a class="social__link" href="#" aria-label="Ссылка на телеграмм">
+                                                <svg class="social__link-icon" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="21" cy="21" r="20.5" stroke="white"/>
+                                                    <path d="M28.1258 12.8616C27.5753 13.0791 11.9498 19.6671 11.9498 19.6671C11.9498 19.6671 11.193 19.9259 11.253 20.4036C11.313 20.8814 11.9303 21.1004 11.9303 21.1004L15.9518 22.4541C15.9518 22.4541 17.166 26.4359 17.4053 27.1919C17.6445 27.9486 17.8358 27.9666 17.8358 27.9666C18.0578 28.0634 18.261 27.9089 18.261 27.9089L20.8598 25.5396L24.9105 28.6454C26.0055 29.1231 26.4038 28.1279 26.4038 28.1279L29.1945 13.8299C29.442 12.7229 28.707 12.6329 28.1258 12.8616Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                                                    <path d="M26.1443 16.3231C26.1645 15.9849 25.6928 16.2264 25.6928 16.2264L15.8693 22.3111C15.8693 22.3111 17.166 26.4361 17.4053 27.1929C17.6438 27.9496 17.9708 28.0786 17.9708 28.0786L18.7043 23.4106C18.7043 23.4106 25.647 16.9404 25.9455 16.6614C26.244 16.3831 26.1443 16.3231 26.1443 16.3231Z" fill="white"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="social__item">
+                                            <a class="social__link" href="#" aria-label="Ссылка на вконтакте">
+                                                <svg class="social__link-icon" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="21" cy="21" r="20.5" stroke="white"/>
+                                                    <path d="M30.8814 27.6011C29.9829 25.9841 27.6684 24.0411 26.7129 23.1956C26.4514 22.9641 26.4234 22.5636 26.6614 22.3076C28.4849 20.3481 29.9434 18.0966 30.4454 16.7361C30.6669 16.1351 30.2084 15.5001 29.5624 15.5001H27.6859C27.0674 15.5001 26.7054 15.7221 26.5329 16.0756C25.0174 19.1811 23.7174 20.5251 22.8074 21.3106C22.2979 21.7506 21.5034 21.3861 21.5034 20.7166C21.5034 19.4266 21.5034 17.7591 21.5034 16.5766C21.5034 16.0031 21.0344 15.5391 20.4559 15.5391L17.0279 15.5001C16.5964 15.5001 16.3499 15.9886 16.6089 16.3311L17.1749 17.1436C17.3879 17.4251 17.5029 17.7676 17.5029 18.1191L17.4999 21.7781C17.4999 22.4146 16.7284 22.7256 16.2704 22.2796C14.7209 20.7706 13.3764 17.6891 12.8924 16.2156C12.7524 15.7891 12.3529 15.5011 11.8999 15.5001L10.0514 15.4956C9.35794 15.4956 8.85094 16.1531 9.03944 16.8151C10.7284 22.7436 14.1939 28.3836 20.3699 28.9951C20.9784 29.0551 21.5034 28.5651 21.5034 27.9586V26.0356C21.5034 25.4841 21.9359 25.0101 22.4919 24.9961C22.5114 24.9956 22.5309 24.9956 22.5504 24.9956C24.1839 24.9956 26.0134 27.3731 26.6534 28.4851C26.8374 28.8051 27.1814 29.0001 27.5534 29.0001H30.0399C30.7654 29.0001 31.2309 28.2306 30.8814 27.6011Z" fill="white"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('./chunk/footer.html')
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

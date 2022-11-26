@@ -1,0 +1,33 @@
+.label-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 55%;
+    margin: 0 auto;
+    &__title {
+        position: relative;
+        text-align: left;
+        &::after {
+            content: '*';
+            position: absolute;
+            color: $red;
+            top: -0.3125rem;
+        }
+        &--norequired::after {
+            display: none;
+        }
+    }
+    &__input {
+        height: 2.5rem;
+        padding: 0.3125rem 0.9375rem;
+        margin-top: 0.625rem;
+        border: 0.0625rem solid #FFFFFF;
+        border-radius: 1.875rem;
+        background-color: #fff;
+        color: $dark-bg;
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: -0.0625rem 0px 0.5rem 0.0625rem #ffcbcb;
+        }
+    }
+}

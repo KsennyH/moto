@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('./chunk/head.html', {
+    "title": "Мото-мир"
+    })
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('./chunk/top-header.html')
+            <div class="header__bottom bottom-header">
+                <div class="container">
+                    <nav class="bottom-header__nav navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="index.html">
+                                    <span>Главная</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="mototechnics.html">
+                                    <span>Мототехника</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мотоциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мопеды</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Скутеры</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Квадроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Гидроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Снегоходы</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Мотозапчасти</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотохимия</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шины</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Расходники</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Лобовые стёкла</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Пластик</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Экипировка</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шлемы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Куртки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Комбинезоны</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Перчатки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотоботы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Аксессуары</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="motoservices.html">
+                                    <span>Мотосервис</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--active">
+                                    <span>Статьи</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="contacts.html">
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    @@include('./chunk/mobile-nav.html')
+                </div>
+            </div>
+        </header>
+
+
+        <main class="main">
+            
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="articles.html">Статьи</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active">Обзор мотоцикла Stels 600 Benelli</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blog-article">
+                <div class="container">
+                    <div class="blog-article__inner">
+                        <div class="blog-article__product">
+                            <article class="product-article__card article">
+                                <div class="article__image">
+                                    <img class="article__img" src="img/stels-benelli.jpg" alt="">
+                                </div>
+                                <div class="article__content">
+                                    <h2 class="article__content-title title">Обзор мотоцикла Stels 600 Benelli</h2>
+                                    <div class="article__text-box">
+                                        <p>
+                                            Дорожный байк Stels 600 Benelli по праву можно назвать самым мощным в своей линейке. 
+                                            Двигатель мотоцикла оборотистый и позволяет легко и безопасно маневрировать в городском потоке.
+                                        </p>
+                                    </div>
+                                    <div class="article__text">
+                                        <p>
+                                            На STELS 600 Benelli установлен рядных 4-цилиндровый бензиновый двигатель BJ465MS-A с рабочим объемом 600 см³. 
+                                            Мотор оснащен двумя распредвалами и 16-клапанным ГРМ, а также системой водяного охлаждения с большим радиатором, 
+                                            установленным в передней части под баком. Система питания двигателя инжекторная EFI с одноточечным прямым впрыском, 
+                                            а предпочтительный «сорт» бензина – не меньше Аи-92. Двигатель оборудуется бесконтактным зажиганием ECU с электронным 
+                                            управлением, электростартером и работает в четыре такта. Его максимальная мощность составляет почти 82 л.с. (81,6) 
+                                            при 11500 об/минуту, а крутящий момент достигает своего пика в 52 Нм при 10500 об/минуту. Как показали независимые 
+                                            тесты, STELS 600 Benelli обладает превосходной динамикой разгона, ничем не уступающей зарубежным аналогам, но при этом 
+                                            спортивным нравом не отличается, все-таки мотоцикл рассчитан на городские условия езды.
+                                        </p>
+                                        <p>
+                                            Если у двигателя спортивного нрава нет, то вот подвеска у байка совсем не «городская», а полноценная спортивная с острым углом 
+                                            наклона рулевой колонки и рассчитанная на широкий круг мотоциклистов за счет возможности регулировки. Спереди конструкторы 
+                                            применили настраиваемую телескопическую вилку перевернутого типа с двумя пружинно-гидравлическими амортизаторами, а сзади 
+                                            использовали конструкцию с массивным алюминиевым маятником и настраиваемым моноамортизатором. В целом поведение подвески 
+                                            адекватное, ее жесткость как спереди, так и сзади идеально подходит для городских условий, обеспечивая запас прочности для 
+                                            любых маневров при любой плотности движения.
+                                        </p>
+                                        <p>
+                                            Отметим и тормозную систему мотоцикла. На обоих колёсах STELS 600 Benelli используются дисковые тормоза с гидравлическими 
+                                            приводами. Спереди установлены два диска и 4-порневые суппорта, а сзади предпочтение отдано одному диску с 2-поршневым 
+                                            суппортом. О наличии или отсутствии системы ABS производитель пока ничего не сообщает.
+                                        </p>
+                                    </div>
+                                    <div class="article__info">
+                                        <time class="article__date" datetime="2022-09-15">15. 09. 2022</time>
+                                        <span class="article__author">Автор: Алексей Иванов</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="product-article__pagination article-pagination">
+                                <ul class="article-pagination__list">
+                                    <li class="article-pagination__item">
+                                        <a class="article-pagination__link">
+                                            <svg class="article-pagination__icon article-pagination__icon--disabled" width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M31 8L1 8M1 8L7.5625 15M1 8L7.5625 1" stroke="white"/>
+                                            </svg>
+                                            <span class="article-pagination__label article-pagination__label--left"></span>
+                                        </a>
+                                    </li>
+                                    <li class="article-pagination__item">
+                                        <a class="article-pagination__link" href="#">
+                                            <span class="article-pagination__label">Новый Baltmotors Dakar 250 E</span>
+                                            <svg class="article-pagination__icon" width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 8H30M30 8L23.4375 1M30 8L23.4375 15" stroke="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-article__comments comments">
+                                <div class="comments__top comments-top">
+                                    <h5 class="comments-top__title">Комментарии:</h5>
+                                    <ul class="comments-top__list">
+                                        <li class="comments-top__item">
+                                            <span class="comments-top__name">Иван Д.</span>
+                                            <div class="comments-top__text">
+                                                <p>
+                                                    Классный байк для новичка. Сам на таком два года катался прежде чем Ямаху литровую купить. 
+                                                </p>
+                                            </div>
+                                            <time class="comments-top__date" datetime="2022-09-16">16. 09. 2022</time>
+                                        </li>
+                                        <li class="comments-top__item">
+                                            <span class="comments-top__name">Олег</span>
+                                            <div class="comments-top__text">
+                                                <p>
+                                                    Отличный байк! Брат недавно такой купил, я тоже собираюсь. 
+                                                </p>
+                                            </div>
+                                            <time class="comments-top__date" datetime="2022-09-16">16. 09. 2022</time>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="comments__bottom comments-bottom">
+                                    <h5 class="comments-bottom__title">Добавить комментарий</h5>
+                                    <div class="comments-bottom__inputs">
+                                        <label class="comments-bottom__label" aria-label="Имя">
+                                            <input class="comments-bottom__input" type="text" placeholder="Имя:">
+                                        </label>
+                                        <label class="comments-bottom__label" aria-label="Почта">
+                                            <input class="comments-bottom__input" type="email" placeholder="E-mail:">
+                                        </label>
+                                    </div>
+                                    <textarea class="comments-bottom__textarea"></textarea>
+                                    <button class="comments-bottom__btn btn" type="submit">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        @@include('./chunk/article-aside.html')
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        @@include('./chunk/footer.html')
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

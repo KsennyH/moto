@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('./chunk/head.html', {
+    "title": "Мото-мир"
+    })
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('./chunk/top-header.html')
+            <div class="header__bottom bottom-header">
+                <div class="container">
+                    <nav class="bottom-header__nav navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--active" href="index.html">
+                                    <span>Главная</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="mototechnics.html">
+                                    <span>Мототехника</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мотоциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Мопеды</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Скутеры</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Квадроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Гидроциклы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="mototechnics.html">Снегоходы</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Мотозапчасти</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.htmoutfit.html">Мотохимия</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.htmoutfit.html">Шины</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.htmoutfit.html">Расходники</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.htmoutfit.html">Лобовые стёкла</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.htmoutfit.html">Пластик</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="outfit.html">
+                                    <span>Экипировка</span>
+                                </a>
+                                <div class="dropdown">
+                                    <nav class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Шлемы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Куртки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Комбинезоны</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Перчатки</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Мотоботы</a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a class="dropdown__link" href="outfit.html">Аксессуары</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="motoservices.html">
+                                    <span>Мотосервис</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="articles.html">
+                                    <span>Статьи</span>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="contacts.html">
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    @@include('./chunk/mobile-nav.html')
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active">Регистрация</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="registration">
+                <div class="container">
+                    <h1 class="registration__title title">Регистрация</h1>
+                    <p class="registration__description">Зарегистрируйтесь для более удобной работы с сайтом.</p>
+                    <form action="" class="registration__form js-form-registration">
+                        <label class="registration__label label-block">
+                            <span class="label-block__title">Имя Фамилия:</span>
+                            <input class="label-block__input" type="text" name="name" required>
+                        </label>
+                        <label class="registration__label label-block">
+                            <span class="label-block__title">E-mail:</span>
+                            <input class="label-block__input" type="email" name="email" required>
+                        </label>
+                        <label class="registration__label label-block">
+                            <span class="label-block__title label-block__title--norequired">Номер телефона:</span>
+                            <input class="label-block__input" type="tel" name="phone">
+                        </label>
+                        <label class="registration__label label-block">
+                            <span class="label-block__title">Пароль (длина пароля - не менее 6 символов):</span>
+                            <input class="label-block__input" type="password" name="password" required>
+                        </label>
+                        <label class="registration__label label-block">
+                            <span class="label-block__title">Подтвердите пароль:</span>
+                            <input class="label-block__input" type="password" name="" required>
+                        </label>
+                        <label class="registration__checkbox-label">
+                            <input class="registration__checkbox-input" type="checkbox" name="" checked>
+                            <span class="registration__custom custom-checkbox"></span>
+                            <span class="registration__name">
+                                Я согласен на <a href="#">обработку персональных данных</a>
+                            </span>
+                        </label>
+                        <button class="btn btn--small" type="submit">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+        
+        @@include('./chunk/footer.html')
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
