@@ -1,0 +1,12 @@
+extends ./layout/app.pug
+
+block variables
+    - const title = "Главная";
+
+block content
+    .wrapper
+        include ./chunk/header.pug
+
+        main.main
+            include ./chunk/motomir.pug
+            include ./chunk/partners.pug
